@@ -1,5 +1,5 @@
-use jsonrpc_http_server::jsonrpc_core::futures;
-use jsonrpc_http_server::jsonrpc_core::{IoHandler, Value};
+use jsonrpc_http_server::jsonrpc_core_zk::futures;
+use jsonrpc_http_server::jsonrpc_core_zk::{IoHandler, Value};
 use jsonrpc_http_server::{hyper, AccessControlAllowOrigin, DomainsValidation, Response, RestApi, ServerBuilder};
 
 fn main() {

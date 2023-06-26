@@ -4,7 +4,7 @@
 
 use jsonrpc_server_utils as server_utils;
 
-pub use jsonrpc_core;
+pub use jsonrpc_core_zk;
 pub use parity_ws as ws;
 
 #[macro_use]
@@ -18,7 +18,7 @@ mod session;
 #[cfg(test)]
 mod tests;
 
-use jsonrpc_core as core;
+use jsonrpc_core_zk as core;
 
 pub use self::error::{Error, Result};
 pub use self::metadata::{MetaExtractor, NoopExtractor, RequestContext};

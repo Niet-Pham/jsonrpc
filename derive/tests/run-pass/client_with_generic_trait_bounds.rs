@@ -1,5 +1,5 @@
-use jsonrpc_core::futures::future;
-use jsonrpc_core::{IoHandler, Result, BoxFuture};
+use jsonrpc_core_zk::futures::future;
+use jsonrpc_core_zk::{IoHandler, Result, BoxFuture};
 use jsonrpc_derive::rpc;
 use std::collections::BTreeMap;
 

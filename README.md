@@ -1,7 +1,7 @@
 # Parity JSON-RPC
 
-**NOTE: This crate is no longer actively developed; please have a look at our 
-[jsonrpsee](https://github.com/paritytech/jsonrpsee) crate if you're looking for an actively 
+**NOTE: This crate is no longer actively developed; please have a look at our
+[jsonrpsee](https://github.com/paritytech/jsonrpsee) crate if you're looking for an actively
 maintained JSON RPC implementation.**
 
 Rust implementation of JSON-RPC 2.0 Specification.
@@ -12,16 +12,17 @@ Transport-agnostic `core` and transport servers for `http`, `ipc`, `websockets` 
 [Documentation](https://docs.rs/jsonrpc-core/)
 
 ## Sub-projects
-- [jsonrpc-core](./core) [![crates.io][core-image]][core-url]
-- [jsonrpc-core-client](./core-client) [![crates.io][core-client-image]][core-client-url]
-- [jsonrpc-http-server](./http) [![crates.io][http-server-image]][http-server-url]
-- [jsonrpc-ipc-server](./ipc) [![crates.io][ipc-server-image]][ipc-server-url]
-- [jsonrpc-tcp-server](./tcp) [![crates.io][tcp-server-image]][tcp-server-url]
-- [jsonrpc-ws-server](./ws) [![crates.io][ws-server-image]][ws-server-url]
-- [jsonrpc-stdio-server](./stdio) [![crates.io][stdio-server-image]][stdio-server-url]
-- [jsonrpc-derive](./derive) [![crates.io][derive-image]][derive-url]
-- [jsonrpc-server-utils](./server-utils) [![crates.io][server-utils-image]][server-utils-url]
-- [jsonrpc-pubsub](./pubsub) [![crates.io][pubsub-image]][pubsub-url]
+
+-   [jsonrpc-core](./core) [![crates.io][core-image]][core-url]
+-   [jsonrpc-core-client](./core-client) [![crates.io][core-client-image]][core-client-url]
+-   [jsonrpc-http-server](./http) [![crates.io][http-server-image]][http-server-url]
+-   [jsonrpc-ipc-server](./ipc) [![crates.io][ipc-server-image]][ipc-server-url]
+-   [jsonrpc-tcp-server](./tcp) [![crates.io][tcp-server-image]][tcp-server-url]
+-   [jsonrpc-ws-server](./ws) [![crates.io][ws-server-image]][ws-server-url]
+-   [jsonrpc-stdio-server](./stdio) [![crates.io][stdio-server-image]][stdio-server-url]
+-   [jsonrpc-derive](./derive) [![crates.io][derive-image]][derive-url]
+-   [jsonrpc-server-utils](./server-utils) [![crates.io][server-utils-image]][server-utils-url]
+-   [jsonrpc-pubsub](./pubsub) [![crates.io][pubsub-image]][pubsub-url]
 
 [core-image]: https://img.shields.io/crates/v/jsonrpc-core.svg
 [core-url]: https://crates.io/crates/jsonrpc-core
@@ -46,14 +47,14 @@ Transport-agnostic `core` and transport servers for `http`, `ipc`, `websockets` 
 
 ## Examples
 
-- [core](./core/examples)
-- [derive](./derive/examples)
-- [pubsub](./pubsub/examples)
+-   [core](./core/examples)
+-   [derive](./derive/examples)
+-   [pubsub](./pubsub/examples)
 
 ### Basic Usage (with HTTP transport)
 
 ```rust
-use jsonrpc_http_server::jsonrpc_core::{IoHandler, Value, Params};
+use jsonrpc_http_server::jsonrpc_core_zk::{IoHandler, Value, Params};
 use jsonrpc_http_server::ServerBuilder;
 
 fn main() {
@@ -74,7 +75,7 @@ fn main() {
 ### Basic usage with derive
 
 ```rust
-use jsonrpc_core::Result;
+use jsonrpc_core_zk::Result;
 use jsonrpc_derive::rpc;
 
 #[rpc]
@@ -92,7 +93,7 @@ impl Rpc for RpcImpl {
 }
 
 fn main() {
-	let mut io = jsonrpc_core::IoHandler::new();
+	let mut io = jsonrpc_core_zk::IoHandler::new();
 	io.extend_with(RpcImpl.to_delegate())
 }
 ```
@@ -101,8 +102,8 @@ fn main() {
 
 ```rust
 use jsonrpc_core_client::transports::local;
-use jsonrpc_core::{BoxFuture, IoHandler, Result};
-use jsonrpc_core::futures::{self, future, TryFutureExt};
+use jsonrpc_core_zk::{BoxFuture, IoHandler, Result};
+use jsonrpc_core_zk::futures::{self, future, TryFutureExt};
 use jsonrpc_derive::rpc;
 
 /// Rpc trait

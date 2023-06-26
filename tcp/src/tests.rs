@@ -3,7 +3,7 @@ use std::str::FromStr;
 use std::sync::Arc;
 use std::time::Duration;
 
-use jsonrpc_core::{MetaIoHandler, Metadata, Value};
+use jsonrpc_core_zk::{MetaIoHandler, Metadata, Value};
 use tokio::io::AsyncReadExt;
 use tokio::io::AsyncWriteExt;
 
@@ -183,7 +183,7 @@ impl MetaExtractor<SocketMetadata> for PeerMetaExtractor {
 fn meta_server() -> ServerBuilder<SocketMetadata> {
 	let mut io = MetaIoHandler::<SocketMetadata>::default();
 	io.add_method_with_meta("say_hello", |_params, meta: SocketMetadata| {
-		jsonrpc_core::futures::future::ready(Ok(Value::String(format!("hello, {}", meta.addr()))))
+		jsonrpc_core_zk::futures::future::ready(Ok(Value::String(format!("hello, {}", meta.addr()))))
 	});
 	ServerBuilder::new(io).session_meta_extractor(PeerMetaExtractor)
 }
@@ -226,7 +226,7 @@ fn message() {
 	let addr: SocketAddr = "127.0.0.1:17790".parse().unwrap();
 	let mut io = MetaIoHandler::<SocketMetadata>::default();
 	io.add_method_with_meta("say_hello", |_params, _: SocketMetadata| {
-		jsonrpc_core::futures::future::ready(Ok(Value::String("hello".to_owned())))
+		jsonrpc_core_zk::futures::future::ready(Ok(Value::String("hello".to_owned())))
 	});
 	let extractor = PeerListMetaExtractor::default();
 	let peer_list = extractor.peers.clone();

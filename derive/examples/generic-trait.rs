@@ -1,6 +1,6 @@
-use jsonrpc_core;
+use jsonrpc_core_zk;
 
-use jsonrpc_core::{BoxFuture, IoHandler, Result};
+use jsonrpc_core_zk::{BoxFuture, IoHandler, Result};
 use jsonrpc_derive::rpc;
 
 #[rpc]
@@ -31,7 +31,7 @@ impl Rpc<u64, String> for RpcImpl {
 	}
 
 	fn call(&self, num: u64) -> BoxFuture<Result<(u64, String)>> {
-		Box::pin(jsonrpc_core::futures::future::ready(Ok((num + 999, "hello".into()))))
+		Box::pin(jsonrpc_core_zk::futures::future::ready(Ok((num + 999, "hello".into()))))
 	}
 }
 

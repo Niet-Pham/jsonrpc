@@ -4,7 +4,7 @@
 //! use jsonrpc_derive::rpc;
 //! use jsonrpc_test as test;
 //!
-//! use jsonrpc_core::{Result, Error, IoHandler};
+//! use jsonrpc_core_zk::{Result, Error, IoHandler};
 //!
 //! #[rpc]
 //! pub trait Test {
@@ -45,7 +45,7 @@
 
 #![deny(missing_docs)]
 
-extern crate jsonrpc_core as rpc;
+extern crate jsonrpc_core_zk as rpc;
 
 /// Test RPC options.
 #[derive(Default, Debug)]

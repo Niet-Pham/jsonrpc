@@ -3,8 +3,8 @@
 //! Right now it supports only server side handling requests.
 //!
 //! ```rust
-//! use jsonrpc_core::IoHandler;
-//! use jsonrpc_core::Value;
+//! use jsonrpc_core_zk::IoHandler;
+//! use jsonrpc_core_zk::Value;
 //! let mut io = IoHandler::new();
 //! io.add_sync_method("say_hello", |_| {
 //!     Ok(Value::String("Hello World!".into()))

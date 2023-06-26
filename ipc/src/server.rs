@@ -328,7 +328,7 @@ impl CloseHandle {
 mod tests {
 	use super::*;
 
-	use jsonrpc_core::Value;
+	use jsonrpc_core_zk::Value;
 	use std::os::unix::net::UnixStream;
 	use std::thread;
 	use std::time::{self, Duration};

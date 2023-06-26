@@ -1,4 +1,4 @@
-use jsonrpc_stdio_server::jsonrpc_core::*;
+use jsonrpc_stdio_server::jsonrpc_core_zk::*;
 use jsonrpc_stdio_server::ServerBuilder;
 
 #[tokio::main]

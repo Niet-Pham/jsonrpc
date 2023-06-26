@@ -1,6 +1,6 @@
 #[macro_use]
 extern crate jsonrpc_derive;
-extern crate jsonrpc_core;
+extern crate jsonrpc_core_zk;
 extern crate jsonrpc_pubsub;
 
 #[rpc]

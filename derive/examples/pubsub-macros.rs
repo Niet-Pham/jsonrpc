@@ -2,7 +2,7 @@ use std::collections::HashMap;
 use std::sync::{atomic, Arc, RwLock};
 use std::thread;
 
-use jsonrpc_core::{Error, ErrorCode, Result};
+use jsonrpc_core_zk::{Error, ErrorCode, Result};
 use jsonrpc_derive::rpc;
 use jsonrpc_pubsub::typed;
 use jsonrpc_pubsub::{PubSubHandler, Session, SubscriptionId};

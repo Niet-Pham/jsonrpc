@@ -105,7 +105,7 @@ mod tests {
 	use super::*;
 	use crate::*;
 	use assert_matches::assert_matches;
-	use jsonrpc_core::{Error, ErrorCode, IoHandler, Params, Value};
+	use jsonrpc_core_zk::{Error, ErrorCode, IoHandler, Params, Value};
 	use jsonrpc_http_server::*;
 
 	fn id<T>(t: T) -> T {

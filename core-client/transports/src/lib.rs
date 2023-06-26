@@ -2,13 +2,13 @@
 
 #![deny(missing_docs)]
 
-use jsonrpc_core::futures::channel::{mpsc, oneshot};
-use jsonrpc_core::futures::{
+use jsonrpc_core_zk::futures::channel::{mpsc, oneshot};
+use jsonrpc_core_zk::futures::{
 	self,
 	task::{Context, Poll},
 	Future, Stream, StreamExt,
 };
-use jsonrpc_core::{Error, Params};
+use jsonrpc_core_zk::{Error, Params};
 use serde::de::DeserializeOwned;
 use serde::Serialize;
 use serde_json::Value;
@@ -344,8 +344,8 @@ mod tests {
 	use super::*;
 	use crate::transports::local;
 	use crate::{RpcChannel, TypedClient};
-	use jsonrpc_core::futures::{future, FutureExt};
-	use jsonrpc_core::{self as core, IoHandler};
+	use jsonrpc_core_zk::futures::{future, FutureExt};
+	use jsonrpc_core_zk::{self as core, IoHandler};
 	use jsonrpc_pubsub::{PubSubHandler, Subscriber, SubscriptionId};
 	use std::sync::atomic::{AtomicBool, Ordering};
 	use std::sync::Arc;
@@ -376,7 +376,7 @@ mod tests {
 		handler.add_sync_method("add", |params: Params| {
 			let (a, b) = params.parse::<(u64, u64)>()?;
 			let res = a + b;
-			Ok(jsonrpc_core::to_value(res).unwrap())
+			Ok(jsonrpc_core_zk::to_value(res).unwrap())
 		});
 
 		let (tx, rx) = std::sync::mpsc::channel();

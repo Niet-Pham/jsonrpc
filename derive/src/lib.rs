@@ -5,8 +5,8 @@
 //! Example
 //!
 //! ```
-//! use jsonrpc_core::{IoHandler, Result, BoxFuture};
-//! use jsonrpc_core::futures::future;
+//! use jsonrpc_core_zk::{IoHandler, Result, BoxFuture};
+//! use jsonrpc_core_zk::futures::future;
 //! use jsonrpc_derive::rpc;
 //!
 //! #[rpc(server)]
@@ -54,7 +54,7 @@
 //! use std::sync::{atomic, Arc, RwLock};
 //! use std::collections::HashMap;
 //!
-//! use jsonrpc_core::{Error, ErrorCode, Result};
+//! use jsonrpc_core_zk::{Error, ErrorCode, Result};
 //! use jsonrpc_derive::rpc;
 //! use jsonrpc_pubsub::{Session, PubSubHandler, SubscriptionId, typed::{Subscriber, Sink}};
 //!
@@ -120,7 +120,7 @@
 //! }
 //!
 //! fn main() {
-//!   let mut io = jsonrpc_core::MetaIoHandler::default();
+//!   let mut io = jsonrpc_core_zk::MetaIoHandler::default();
 //!   io.extend_with(RpcImpl::default().to_delegate());
 //!
 //!   let server_builder = jsonrpc_tcp_server::ServerBuilder::with_meta_extractor(
@@ -141,8 +141,8 @@
 //!
 //! ```
 //! use jsonrpc_core_client::transports::local;
-//! use jsonrpc_core::futures::{self, future};
-//! use jsonrpc_core::{IoHandler, Result, BoxFuture};
+//! use jsonrpc_core_zk::futures::{self, future};
+//! use jsonrpc_core_zk::{IoHandler, Result, BoxFuture};
 //! use jsonrpc_derive::rpc;
 //!
 //! /// Rpc trait

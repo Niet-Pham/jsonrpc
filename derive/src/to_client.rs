@@ -48,11 +48,11 @@ pub fn generate_client_module(
 		pub mod gen_client {
 			use #client_name as _jsonrpc_core_client;
 			use super::*;
-			use _jsonrpc_core::{
+			use _jsonrpc_core_zk::{
 				Call, Error, ErrorCode, Id, MethodCall, Params, Request,
 				Response, Version,
 			};
-			use _jsonrpc_core::serde_json::{self, Value};
+			use _jsonrpc_core_zk::serde_json::{self, Value};
 			use _jsonrpc_core_client::futures::{Future, FutureExt, channel::{mpsc, oneshot}};
 			use _jsonrpc_core_client::{RpcChannel, RpcResult, RpcFuture, TypedClient, TypedSubscriptionStream};
 

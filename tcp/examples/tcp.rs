@@ -1,5 +1,5 @@
 use env_logger;
-use jsonrpc_tcp_server::jsonrpc_core::*;
+use jsonrpc_tcp_server::jsonrpc_core_zk::*;
 use jsonrpc_tcp_server::ServerBuilder;
 
 fn main() {

@@ -1,11 +1,11 @@
-extern crate jsonrpc_core;
+extern crate jsonrpc_core_zk;
 extern crate jsonrpc_ipc_server;
 extern crate jsonrpc_pubsub;
 
 use std::sync::Arc;
 use std::{thread, time};
 
-use jsonrpc_core::*;
+use jsonrpc_core_zk::*;
 use jsonrpc_ipc_server::{RequestContext, ServerBuilder, SessionId, SessionStats};
 use jsonrpc_pubsub::{PubSubHandler, Session, Subscriber, SubscriptionId};
 

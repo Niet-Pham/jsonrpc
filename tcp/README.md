@@ -1,4 +1,5 @@
 # jsonrpc-tcp-server
+
 TCP server for JSON-RPC 2.0.
 
 [Documentation](http://paritytech.github.io/jsonrpc/jsonrpc_tcp_server/index.html)
@@ -16,7 +17,7 @@ jsonrpc-tcp-server = "15.0"
 
 ```rust
 use jsonrpc_tcp_server::*;
-use jsonrpc_tcp_server::jsonrpc_core::*;
+use jsonrpc_tcp_server::jsonrpc_core_zk::*;
 
 fn main() {
 	let mut io = IoHandler::default();
@@ -31,5 +32,3 @@ fn main() {
 	server.wait().unwrap()
 }
 ```
-
-

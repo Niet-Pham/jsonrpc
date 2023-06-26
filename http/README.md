@@ -1,4 +1,5 @@
 # jsonrpc-http-server
+
 Rust http server using JSON-RPC 2.0.
 
 [Documentation](http://paritytech.github.io/jsonrpc/jsonrpc_http_server/index.html)
@@ -15,7 +16,7 @@ jsonrpc-http-server = "18.0"
 `main.rs`
 
 ```rust
-use jsonrpc_http_server::jsonrpc_core::{IoHandler, Value, Params};
+use jsonrpc_http_server::jsonrpc_core_zk::{IoHandler, Value, Params};
 use jsonrpc_http_server::ServerBuilder;
 
 fn main() {
@@ -32,15 +33,21 @@ fn main() {
 	server.wait();
 }
 ```
+
 You can now test the above server by running `cargo run` in one terminal, and from another terminal issue the following POST request to your server:
+
 ```
 $ curl -X POST -H "Content-Type: application/json" -d '{"jsonrpc": "2.0", "method": "say_hello", "id":123 }' 127.0.0.1:3030
 ```
+
 to which the server will respond with the following:
+
 ```
 {"jsonrpc":"2.0","result":"hello","id":123}
 ```
+
 If you omit any of the fields above, or invoke a different method you will get an informative error message:
+
 ```
 $ curl -X POST -H "Content-Type: application/json" -d '{"method": "say_hello", "id":123 }' 127.0.0.1:3030
 {"error":{"code":-32600,"message":"Unsupported JSON-RPC protocol version"},"id":123}

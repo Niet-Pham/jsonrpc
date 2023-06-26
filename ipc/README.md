@@ -1,4 +1,5 @@
 # jsonrpc-ipc-server
+
 IPC server (Windows & Linux) for JSON-RPC 2.0.
 
 [Documentation](http://paritytech.github.io/jsonrpc/jsonrpc_ipc_server/index.html)
@@ -18,7 +19,7 @@ jsonrpc-ipc-server = "15.0"
 extern crate jsonrpc_ipc_server;
 
 use jsonrpc_ipc_server::ServerBuilder;
-use jsonrpc_ipc_server::jsonrpc_core::*;
+use jsonrpc_ipc_server::jsonrpc_core_zk::*;
 
 fn main() {
 	let mut io = IoHandler::new();
@@ -31,4 +32,3 @@ fn main() {
 	server.wait();
 }
 ```
-

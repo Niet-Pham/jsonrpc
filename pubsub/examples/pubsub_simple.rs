@@ -1,7 +1,7 @@
 use std::sync::Arc;
 use std::{thread, time};
 
-use jsonrpc_core::*;
+use jsonrpc_core_zk::*;
 use jsonrpc_pubsub::{PubSubHandler, Session, Subscriber, SubscriptionId};
 use jsonrpc_tcp_server::{RequestContext, ServerBuilder};
 

@@ -5,7 +5,7 @@ use futures::{
 	task::{Context, Poll},
 	Future, Sink, Stream, StreamExt,
 };
-use jsonrpc_core::Id;
+use jsonrpc_core_zk::Id;
 use jsonrpc_pubsub::SubscriptionId;
 use log::debug;
 use serde_json::Value;

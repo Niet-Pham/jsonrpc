@@ -1,4 +1,4 @@
-use jsonrpc_http_server::jsonrpc_core::*;
+use jsonrpc_http_server::jsonrpc_core_zk::*;
 use jsonrpc_http_server::{cors::AccessControlAllowHeaders, hyper, RestApi, ServerBuilder};
 
 #[derive(Default, Clone)]

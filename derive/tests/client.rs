@@ -1,6 +1,6 @@
 use assert_matches::assert_matches;
-use jsonrpc_core::futures::{self, FutureExt, TryFutureExt};
-use jsonrpc_core::{IoHandler, Result};
+use jsonrpc_core_zk::futures::{self, FutureExt, TryFutureExt};
+use jsonrpc_core_zk::{IoHandler, Result};
 use jsonrpc_core_client::transports::local;
 use jsonrpc_derive::rpc;
 
@@ -49,7 +49,7 @@ mod client_server {
 
 mod named_params {
 	use super::*;
-	use jsonrpc_core::Params;
+	use jsonrpc_core_zk::Params;
 	use serde_json::json;
 
 	#[rpc(client, params = "named")]
@@ -63,7 +63,7 @@ mod named_params {
 
 	#[test]
 	fn client_generates_correct_named_params_payload() {
-		use jsonrpc_core::futures::{FutureExt, TryFutureExt};
+		use jsonrpc_core_zk::futures::{FutureExt, TryFutureExt};
 
 		let expected = json!({ // key names are derived from function parameter names in the trait
 			"number": 3,
@@ -91,7 +91,7 @@ mod named_params {
 
 mod raw_params {
 	use super::*;
-	use jsonrpc_core::Params;
+	use jsonrpc_core_zk::Params;
 	use serde_json::json;
 
 	#[rpc(client)]

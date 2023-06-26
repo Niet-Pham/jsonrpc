@@ -1,7 +1,7 @@
 //! jsonrpc server over tcp/ip
 //!
 //! ```no_run
-//! use jsonrpc_core::*;
+//! use jsonrpc_core_zk::*;
 //! use jsonrpc_tcp_server::ServerBuilder;
 //!
 //! fn main() {
@@ -21,7 +21,7 @@
 
 use jsonrpc_server_utils as server_utils;
 
-pub use jsonrpc_core;
+pub use jsonrpc_core_zk;
 
 #[macro_use]
 extern crate log;
@@ -40,7 +40,7 @@ mod logger;
 #[cfg(test)]
 mod tests;
 
-use jsonrpc_core as jsonrpc;
+use jsonrpc_core_zk as jsonrpc;
 
 pub(crate) use crate::jsonrpc::futures;
 

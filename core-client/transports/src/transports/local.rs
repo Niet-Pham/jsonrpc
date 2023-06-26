@@ -6,7 +6,7 @@ use futures::{
 	task::{Context, Poll},
 	Future, Sink, SinkExt, Stream, StreamExt,
 };
-use jsonrpc_core::{BoxFuture, MetaIoHandler, Metadata, Middleware};
+use jsonrpc_core_zk::{BoxFuture, MetaIoHandler, Metadata, Middleware};
 use jsonrpc_pubsub::Session;
 use std::ops::Deref;
 use std::pin::Pin;

@@ -3,7 +3,7 @@
 //! ```no_run
 //!
 //! use jsonrpc_stdio_server::ServerBuilder;
-//! use jsonrpc_stdio_server::jsonrpc_core::*;
+//! use jsonrpc_stdio_server::jsonrpc_core_zk::*;
 //!
 //! #[tokio::main]
 //! async fn main() {
@@ -25,14 +25,14 @@ use std::sync::Arc;
 #[macro_use]
 extern crate log;
 
-pub use jsonrpc_core;
+pub use jsonrpc_core_zk;
 pub use tokio;
 
-use jsonrpc_core::{MetaIoHandler, Metadata, Middleware};
+use jsonrpc_core_zk::{MetaIoHandler, Metadata, Middleware};
 use tokio_util::codec::{FramedRead, LinesCodec};
 
 /// Stdio server builder
-pub struct ServerBuilder<M: Metadata = (), T: Middleware<M> = jsonrpc_core::NoopMiddleware> {
+pub struct ServerBuilder<M: Metadata = (), T: Middleware<M> = jsonrpc_core_zk::NoopMiddleware> {
 	handler: Arc<MetaIoHandler<M, T>>,
 }
 
@@ -85,7 +85,7 @@ where
 
 	/// Process a request asynchronously
 	fn process(io: &Arc<MetaIoHandler<M, T>>, input: String) -> impl Future<Output = String> + Send {
-		use jsonrpc_core::futures::FutureExt;
+		use jsonrpc_core_zk::futures::FutureExt;
 		let f = io.handle_request(&input, Default::default());
 		f.map(move |result| match result {
 			Some(res) => res,

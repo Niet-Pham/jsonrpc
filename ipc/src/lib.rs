@@ -4,7 +4,7 @@
 
 use jsonrpc_server_utils as server_utils;
 
-pub use jsonrpc_core;
+pub use jsonrpc_core_zk;
 
 #[macro_use]
 extern crate log;
@@ -20,7 +20,7 @@ mod meta;
 mod select_with_weak;
 mod server;
 
-use jsonrpc_core as jsonrpc;
+use jsonrpc_core_zk as jsonrpc;
 
 pub use crate::meta::{MetaExtractor, NoopExtractor, RequestContext};
 pub use crate::server::{CloseHandle, SecurityAttributes, Server, ServerBuilder};

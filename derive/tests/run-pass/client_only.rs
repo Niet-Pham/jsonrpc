@@ -1,10 +1,10 @@
-extern crate jsonrpc_core;
+extern crate jsonrpc_core_zk;
 extern crate jsonrpc_core_client;
 #[macro_use]
 extern crate jsonrpc_derive;
 
-use jsonrpc_core::IoHandler;
-use jsonrpc_core::futures::{self, TryFutureExt};
+use jsonrpc_core_zk::IoHandler;
+use jsonrpc_core_zk::futures::{self, TryFutureExt};
 use jsonrpc_core_client::transports::local;
 
 #[rpc(client)]

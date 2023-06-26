@@ -1,4 +1,4 @@
-use jsonrpc_core::{IoHandler, Response, Result};
+use jsonrpc_core_zk::{IoHandler, Response, Result};
 use jsonrpc_derive::rpc;
 use serde_json;
 

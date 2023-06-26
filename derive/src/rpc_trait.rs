@@ -51,7 +51,7 @@ impl<'a> Fold for RpcTrait {
 			if self.has_pubsub_methods {
 				ty.bounds.push(parse_quote!(_jsonrpc_pubsub::PubSubMetadata))
 			} else {
-				ty.bounds.push(parse_quote!(_jsonrpc_core::Metadata))
+				ty.bounds.push(parse_quote!(_jsonrpc_core_zk::Metadata))
 			}
 			return ty;
 		}
@@ -206,7 +206,7 @@ fn generate_server_module(
 		/// The generated server module.
 		pub mod gen_server {
 			#optional_pubsub_import
-			use self::_jsonrpc_core::futures as _futures;
+			use self::_jsonrpc_core_zk::futures as _futures;
 			use super::*;
 
 			#rpc_server_trait

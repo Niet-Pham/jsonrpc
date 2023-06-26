@@ -1,4 +1,4 @@
-use jsonrpc_core::*;
+use jsonrpc_core_zk::*;
 
 fn main() {
 	futures_executor::block_on(async {

@@ -593,7 +593,7 @@ where
 #[cfg(test)]
 mod test {
 	use super::{hyper, RpcHandler};
-	use jsonrpc_core::middleware::Noop;
+	use jsonrpc_core_zk::middleware::Noop;
 
 	#[test]
 	fn test_case_insensitive_content_type() {

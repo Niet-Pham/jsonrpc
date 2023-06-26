@@ -1,8 +1,8 @@
-extern crate jsonrpc_core;
+extern crate jsonrpc_core_zk;
 #[macro_use]
 extern crate jsonrpc_derive;
 
-use jsonrpc_core::{Result, IoHandler};
+use jsonrpc_core_zk::{Result, IoHandler};
 
 #[rpc(server)]
 pub trait Rpc {

@@ -37,7 +37,7 @@ pub async fn connect<P: AsRef<Path>, Client: From<RpcChannel>>(path: P) -> Resul
 mod tests {
 	use super::*;
 	use crate::*;
-	use jsonrpc_core::{Error, ErrorCode, IoHandler, Params, Value};
+	use jsonrpc_core_zk::{Error, ErrorCode, IoHandler, Params, Value};
 	use jsonrpc_ipc_server::ServerBuilder;
 	use parity_tokio_ipc::dummy_endpoint;
 	use serde_json::map::Map;

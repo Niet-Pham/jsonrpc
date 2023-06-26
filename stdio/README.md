@@ -1,4 +1,5 @@
 # jsonrpc-stdio-server
+
 STDIN/STDOUT server for JSON-RPC 2.0.
 Takes one request per line and outputs each response on a new line.
 
@@ -17,7 +18,7 @@ jsonrpc-stdio-server = "15.0"
 
 ```rust
 use jsonrpc_stdio_server::ServerBuilder;
-use jsonrpc_stdio_server::jsonrpc_core::*;
+use jsonrpc_stdio_server::jsonrpc_core_zk::*;
 
 fn main() {
 	let mut io = IoHandler::default();

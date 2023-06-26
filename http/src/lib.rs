@@ -1,7 +1,7 @@
 //! jsonrpc http server.
 //!
 //! ```no_run
-//! use jsonrpc_core::*;
+//! use jsonrpc_core_zk::*;
 //! use jsonrpc_http_server::*;
 //!
 //! fn main() {
@@ -23,7 +23,7 @@
 use jsonrpc_server_utils as server_utils;
 
 pub use hyper;
-pub use jsonrpc_core;
+pub use jsonrpc_core_zk;
 
 #[macro_use]
 extern crate log;
@@ -48,7 +48,7 @@ use crate::jsonrpc::MetaIoHandler;
 use crate::server_utils::reactor::{Executor, UninitializedExecutor};
 use futures::{channel::oneshot, future};
 use hyper::Body;
-use jsonrpc_core as jsonrpc;
+use jsonrpc_core_zk as jsonrpc;
 
 pub use crate::handler::ServerHandler;
 pub use crate::response::Response;

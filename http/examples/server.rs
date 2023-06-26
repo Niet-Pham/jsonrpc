@@ -1,4 +1,4 @@
-use jsonrpc_http_server::jsonrpc_core::*;
+use jsonrpc_http_server::jsonrpc_core_zk::*;
 use jsonrpc_http_server::{AccessControlAllowOrigin, DomainsValidation, RestApi, ServerBuilder};
 
 fn main() {

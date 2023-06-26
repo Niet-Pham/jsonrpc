@@ -156,7 +156,7 @@ where
 mod tests {
 	use super::*;
 
-	fn basic_server_builder() -> ServerBuilder<(), jsonrpc_core::middleware::Noop> {
+	fn basic_server_builder() -> ServerBuilder<(), jsonrpc_core_zk::middleware::Noop> {
 		let io = core::IoHandler::default();
 		ServerBuilder::new(io)
 	}

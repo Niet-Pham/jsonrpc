@@ -13,7 +13,7 @@ version = "18.0.0"
 [dependencies]
 futures = "0.3"
 hyper = { version = "0.14", features = ["http1", "tcp", "server",  "stream"] }
-jsonrpc-core = { version = "18.0.0", path = "../core" }
+jsonrpc-core-zk = { version = "18.0.0", path = "../core" }
 jsonrpc-server-utils = { version = "18.0.0", path = "../server-utils" }
 log = "0.4"
 net2 = "0.2"

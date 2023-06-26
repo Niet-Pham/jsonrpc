@@ -1,5 +1,5 @@
 use jsonrpc_derive::rpc;
-use jsonrpc_core::{Result, IoHandler};
+use jsonrpc_core_zk::{Result, IoHandler};
 
 #[rpc]
 pub trait Rpc {

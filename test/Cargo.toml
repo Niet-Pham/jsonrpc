@@ -10,7 +10,7 @@ documentation = "https://docs.rs/jsonrpc-test/"
 edition = "2018"
 
 [dependencies]
-jsonrpc-core = { version = "18.0.0", path = "../core" }
+jsonrpc-core-zk = { version = "18.0.0", path = "../core" }
 jsonrpc-core-client = { version = "18.0.0", path = "../core-client" }
 jsonrpc-pubsub = { version = "18.0.0", path = "../pubsub" }
 log = "0.4"

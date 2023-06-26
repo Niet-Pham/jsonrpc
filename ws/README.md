@@ -1,4 +1,5 @@
 # jsonrpc-ws-server
+
 WebSockets server for JSON-RPC 2.0.
 
 [Documentation](http://paritytech.github.io/jsonrpc/jsonrpc_ws_server/index.html)
@@ -16,7 +17,7 @@ jsonrpc-ws-server = "15.0"
 
 ```rust
 use jsonrpc_ws_server::*;
-use jsonrpc_ws_server::jsonrpc_core::*;
+use jsonrpc_ws_server::jsonrpc_core_zk::*;
 
 fn main() {
 	let mut io = IoHandler::new();
@@ -31,4 +32,3 @@ fn main() {
 	server.wait().unwrap()
 }
 ```
-

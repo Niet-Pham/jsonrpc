@@ -1,12 +1,12 @@
-use jsonrpc_core;
+use jsonrpc_core_zk;
 
-use self::jsonrpc_core::{Error, ErrorCode, IoHandler, Params, Value};
+use self::jsonrpc_core_zk::{Error, ErrorCode, IoHandler, Params, Value};
 use std::io::{Read, Write};
 use std::net::TcpStream;
 use std::str::Lines;
 use std::time::Duration;
 
-use self::jsonrpc_core::futures;
+use self::jsonrpc_core_zk::futures;
 use super::*;
 
 fn serve_hosts(hosts: Vec<Host>) -> Server {

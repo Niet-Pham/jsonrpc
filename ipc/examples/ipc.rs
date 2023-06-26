@@ -1,6 +1,6 @@
 use jsonrpc_ipc_server;
 
-use jsonrpc_ipc_server::jsonrpc_core::*;
+use jsonrpc_ipc_server::jsonrpc_core_zk::*;
 
 fn main() {
 	let mut io = MetaIoHandler::<()>::default();

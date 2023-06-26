@@ -1,7 +1,7 @@
 //! A simple example
 #![deny(missing_docs)]
-use jsonrpc_core::futures::{self, future, TryFutureExt};
-use jsonrpc_core::{BoxFuture, IoHandler, Result};
+use jsonrpc_core_zk::futures::{self, future, TryFutureExt};
+use jsonrpc_core_zk::{BoxFuture, IoHandler, Result};
 use jsonrpc_core_client::transports::local;
 use jsonrpc_derive::rpc;
 

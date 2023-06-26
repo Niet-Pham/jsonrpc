@@ -13,7 +13,7 @@ version = "18.0.0"
 futures = "0.3"
 log = "0.4"
 tower-service = "0.3"
-jsonrpc-core = { version = "18.0.0", path = "../core" }
+jsonrpc-core-zk = { version = "18.0.0", path = "../core" }
 jsonrpc-server-utils = { version = "18.0.0", path = "../server-utils", default-features = false }
 parity-tokio-ipc = "0.9"
 parking_lot = "0.11.0"

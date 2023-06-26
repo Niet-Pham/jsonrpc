@@ -2,7 +2,7 @@
 
 #![deny(missing_docs)]
 
-use jsonrpc_core as core;
+use jsonrpc_core_zk as core;
 
 #[macro_use]
 extern crate log;
